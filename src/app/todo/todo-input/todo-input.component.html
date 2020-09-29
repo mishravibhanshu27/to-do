@@ -1,0 +1,9 @@
+<div class="textdiv">
+    <input #newTask
+      (keyup.enter)="addTask(newTask.value)"
+      (blur)="addTask(newTask.value); newTask.value='' ">
+</div>
+
+<div class="Button"><button (click)="addTask(newTask.value)">Add</button></div>
+
+<app-todo-list [tasks]="tasks"></app-todo-list>
